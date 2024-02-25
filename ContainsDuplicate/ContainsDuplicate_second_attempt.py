@@ -3,6 +3,7 @@ class Solution:
         
         # second attempt
         # solved in ~15-20mins
+        # Incorrect - fails on some testcases
 
         # store our values in a hashmap - { 1 : 2 }
         # For example 1
@@ -26,3 +27,20 @@ class Solution:
 
         # if any value appears at least twice
         #return True
+        
+    def containsDuplicate(self, nums: List[int]) -> bool:
+    
+        # have to use set - easiest
+        my_set = set()
+
+        # iterate
+        for i in nums:
+            # if i is in the set, return True immediately
+            if i in my_set:
+                return True
+            else:
+                my_set.add(i)
+        return False
+
+
+
